@@ -152,4 +152,6 @@ async function selectMicrophone() {
 // message. Otherwise, start the application.
 window.addEventListener('load', isSupported ? selectMicrophone : () => {
   showError($showErrorModal, new Error('This browser is not supported.'));
+  selectMicrophone()
+  selectCamera()
 });
